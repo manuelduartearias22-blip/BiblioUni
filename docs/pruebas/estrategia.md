@@ -38,3 +38,7 @@ Java, Maven, Spring Boot y JUnit 5 con `spring-boot-starter-test`. Usar datos fi
 
 ## 9. Riesgos y criterios de salida
 Riesgos principales: préstamo duplicado, inconsistencia de disponibilidad, pérdida de integridad y manejo incorrecto de errores. Para cerrar esta unidad: documentos versionados, escenarios priorizados, prueba inicial ejecutada sin fallos y evidencia disponible. Las pruebas formales restantes se implementarán en las siguientes unidades.
+
+## Seguimiento de la estrategia de pruebas
+
+La estrategia de pruebas de BiblioUni se utilizará como referencia para el diseño, ejecución y seguimiento de casos de prueba durante las Unidades 2 y 3. Los resultados se documentarán para identificar defectos, verificar las correcciones y evaluar la calidad del sistema.
