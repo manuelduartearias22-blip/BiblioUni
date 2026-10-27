@@ -1,12 +1,13 @@
 package com.bibliouni.servicio;
-
+import static org.junit.jupiter.api.Assertions.*;
+import com.bibliouni.BiblioUniApplication;
 import org.junit.jupiter.api.Test;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+@SpringBootTest(classes = BiblioUniApplication.class)
 class MaterialServiceTest {
-    @Test
-    void contextLoads() {
-        // Prueba inicial de descubrimiento y ejecución con JUnit 5.
-        // No carga el contexto de Spring; para ello usar @SpringBootTest
-        // con la configuración real del proyecto.
-    }
+ @Autowired MaterialService servicio;
+ @Test void contextLoads() { assertNotNull(servicio); }
+ @Test void materialExistente() { assertTrue(servicio.buscarPorId(1L).isPresent()); }
+ @Test void materialInexistente() { assertTrue(servicio.buscarPorId(999L).isEmpty()); }
 }
