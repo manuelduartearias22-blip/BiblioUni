@@ -20,3 +20,19 @@ Se utiliza el modelo de **ocho características solicitado por la actividad** (I
 3. **Seguridad:** comprobaciones de acceso y validación de entradas cuando el sistema incluya autenticación/autorización; no se contempla pentesting avanzado.
 
 **Nota:** Mantenibilidad también es alta por su importancia para las unidades 2 y 3, pero se priorizan las tres anteriores por el impacto directo en usuarios y datos.
+
+
+## Umbrales propuestos y subcaracterísticas
+| Característica | Subcaracterística prioritaria | Umbral de aceptación propuesto | Técnica / limitación |
+|---|---|---|---|
+| Adecuación funcional | Corrección funcional | 100 % de casos críticos aprobados | JUnit y pruebas API |
+| Eficiencia de desempeño | Comportamiento temporal | p95 < 500 ms para consultas simples en ambiente controlado | Medición futura; no ejecutada |
+| Compatibilidad | Interoperabilidad | 100 % de contratos REST priorizados válidos | Pruebas de contrato futuras |
+| Usabilidad | Capacidad de aprendizaje | >= 80 % de tareas completadas sin ayuda | Requiere interfaz; no disponible |
+| Fiabilidad | Madurez | 0 errores críticos en flujos de préstamo | Flujo no implementado |
+| Seguridad | Confidencialidad | 100 % de accesos no autorizados rechazados | Requiere autenticación; no disponible |
+| Mantenibilidad | Capacidad de prueba | >= 80 % de ramas críticas cubiertas | JaCoCo por configurar |
+| Portabilidad | Adaptabilidad | Compila y ejecuta en 2 entornos Java compatibles | Validación futura |
+
+### Priorización y compromisos
+Se priorizan adecuación funcional, fiabilidad y seguridad por impacto en las operaciones y los datos. Una validación más estricta puede aumentar el tiempo de respuesta (seguridad frente a rendimiento); una arquitectura desacoplada puede aumentar el esfuerzo inicial, pero mejorar mantenibilidad. Estas metas son criterios de diseño y **no resultados obtenidos**. La actividad solicita las ocho características del modelo de 2011; se respeta esa estructura.
